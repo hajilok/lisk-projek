@@ -44,3 +44,10 @@ coverage/
 *.temp
 *.tmp
 *.swp
+wallet
+wallet*
+wallet.txt
+wallet/
+*.txt
+wallet.txt
+wallet.txt
