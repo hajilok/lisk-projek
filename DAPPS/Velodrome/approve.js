@@ -26,7 +26,6 @@ const approve = async (privatekey) => {
         from: account.address,
         to: contract,
         data: data,
-        nonce: await web3.eth.getTransactionCount(account.address),
         gas: gasEstimate,
         gasPrice: await web3.eth.getGasPrice(),
     }
