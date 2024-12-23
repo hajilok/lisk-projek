@@ -10,6 +10,10 @@ Join my channel : https://t.me/makmum
 - Support Velodrome build on superchain Optimism
 - Support Multiaccount
 
+# Update 
+- Auto Push 500 point ( 10 point x 50 tx)
+- fix bug approve nonuce low 
+
 
 # Installation
 Syarat : 
