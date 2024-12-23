@@ -41,7 +41,7 @@ const veloDrome = async (privatekey) => {
             to: superchainContract,
             data: data,
             value: amount,
-            nonce: await web3.eth.getTransactionCount(account.address),
+            nonce: await web3.eth.getTransactionCount(account.address, 'pending'),
             gas: gasEstimate,
             gasPrice: gasPrice,
         };

@@ -51,3 +51,6 @@ wallet/
 *.txt
 wallet.txt
 wallet.txt
+wallet.txt
+.gitignore
+*.txt
