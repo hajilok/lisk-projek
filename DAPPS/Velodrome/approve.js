@@ -8,7 +8,7 @@ const approve = async (privatekey) => {
 
     const contract = "0x05D032ac25d322df992303dCa074EE7392C117b9";
     const spender = '0x652e53C6a4FE39B6B30426d9c96376a105C89A95';
-    const amount = '100000';
+    const amount = '10000';
 
     const approve = new web3.eth.Contract(usdtABI, contract);
     const data = approve.methods.approve(spender, amount).encodeABI();
