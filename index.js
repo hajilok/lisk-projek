@@ -34,7 +34,7 @@ const swapUsdt = async (privatekey) => {
     const amount = web3.utils.toWei('0.000004', 'ether');
     const inputs = [
         "0x0000000000000000000000000000000000000000000000000000000000000002000000000000000000000000000000000000000000000000000003a352944000",
-        `0x000000000000000000000000${addressWithoutPrefix}000000000000000000000000000000000000000000000000000003a352944000000000000000000000000000000000000000000000000000000000000000378000000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002b4200000000000000000000000000000000000006000bb805d032ac25d322df992303dca074ee7392c117b9000000000000000000000000000000000000000000`
+        `0x000000000000000000000000${addressWithoutPrefix}000000000000000000000000000000000000000000000000000003a35294400000000000000000000000000000000000000000000000000000000000000032a700000000000000000000000000000000000000000000000000000000000000a00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000002b420000000000000000000000000000000000000600006405d032ac25d322df992303dca074ee7392c117b9000000000000000000000000000000000000000000`
     ]
     const deadline = Math.floor(Date.now() / 1000) + 60 * 10;
     const data = contract.methods.execute(bytes, inputs, deadline).encodeABI();
@@ -75,11 +75,11 @@ const main = async () => {
                     const formattedPrivateKey = privatekey.startsWith('0x') ? privatekey : '0x' + privatekey;
                     const getOku = await swapUsdt(formattedPrivateKey);
                     const getVelodrome = await veloDrome(formattedPrivateKey);
+                    console.log(getVelodrome)
                     console.log(chalk.green(`Successfully swap eth to usd in okutrade, tx hash https://blockscout.lisk.com/tx/${getOku}`));
                     console.log(chalk.white(`Success swap usdt to eth on Velodrome build on ${chalk.bgRed("Superchain OPTIMISM")} : https://thesuperscan.io/tx/${getVelodrome}`));
                 } catch (error) {
-                    console.log(`Error Swap, idont know`);
-                    console.log(`Detail: ${error}`);
+                    console.log(`Error Swap Detail : ${error}`);
                 }
             }
             console.log(chalk.blue('Menunggu 10 menit sebelum siklus berikutnya...'));
