@@ -20,7 +20,7 @@ const veloDrome = async (privatekey) => {
 
     try {
         const usdtapp = await approve(privatekey);
-        if (!usdtapp) {
+        if (usdtapp === false) {
             return `Error to approve optimismUSDT`;
         }
 
