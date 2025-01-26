@@ -84,7 +84,7 @@ const main = async () => {
             console.log(chalk.blue('Menunggu 10 menit sebelum siklus berikutnya...'));
             await delay(600000); // Delay 10 menit
         }
-        console.log(chalk.blue('Menunggu 24 jam sebelum memulai kembali...'));
+        console.log(chalk.blue('Menunggu Seminggu sebelum memulai kembali...'));
         await delay(604800000); // Delay 24 jam
     }
 };
